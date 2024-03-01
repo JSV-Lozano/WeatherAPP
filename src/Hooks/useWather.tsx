@@ -15,7 +15,7 @@ function useWather() {
   const getListSearch = async () => {
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${state.searchInput}&limit=5&appid=${APIKEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${state.searchInput}&limit=5&appid=${APIKEY}`
       );
       dispatch({ type: "GET_DATA_LIST_CITYS", payload: response.data });
       dispatch({ type: "SHOW_MENU_LIST", payload: true });
